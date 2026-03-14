@@ -40,8 +40,7 @@ def handle_get(db, parts):
         print("")  # Missing key
         return
     key = parts[1]
-    print(db.get(key, ""))  # Empty string if key missing
-
+    print(db.get(key, ""))  
 
 def handle_delete(db, parts):
     """Handle DELETE command."""
@@ -53,7 +52,7 @@ def handle_delete(db, parts):
         save_database(DB_FILE, db)
         print("OK")
     else:
-        print("")  # Empty string if key missing
+        print("")  
 
 
 def main():
